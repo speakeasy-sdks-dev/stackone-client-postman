@@ -1,0 +1,22 @@
+lockVersion: 2.0.0
+id: 3a450d25-b36a-4ee1-a439-d28897ecbc3f
+management:
+  docChecksum: 6720404dfa154ba0b277d0022629d9d4
+  docVersion: 1.0.0
+  speakeasyVersion: 1.279.0
+  generationVersion: 2.322.5
+  releaseVersion: 0.0.1
+  configChecksum: 266fbc3503fc00491daa830096d10bf0
+features:
+  postman:
+    constsAndDefaults: 0.1.0
+    core: 0.1.0
+    deprecations: 0.0.0
+    examples: 0.1.0
+    globalSecurity: 0.1.0
+    globalServerURLs: 0.1.0
+    groups: 0.1.0
+    nameOverrides: 0.1.0
+    pagination: 0.0.0
+generatedFiles:
+  - openapi_postman_collection.json

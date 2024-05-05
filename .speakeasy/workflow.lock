@@ -1,0 +1,27 @@
+speakeasyVersion: 1.279.0
+sources:
+    hris:
+        sourceNamespace: hris
+        sourceRevisionDigest: sha256:82502c02f7326834f5973abb6f50de8cdc24f65c40b5c16bf1a87381e01460e5
+        sourceBlobDigest: sha256:a21283c725517eae2c1e09b5fa157355a7cbe02c3b05854f3ecb07cf8820cc1a
+        tags:
+            - latest
+targets:
+    my-first-target:
+        source: hris
+        sourceNamespace: hris
+        sourceRevisionDigest: sha256:82502c02f7326834f5973abb6f50de8cdc24f65c40b5c16bf1a87381e01460e5
+        sourceBlobDigest: sha256:a21283c725517eae2c1e09b5fa157355a7cbe02c3b05854f3ecb07cf8820cc1a
+        outLocation: /Users/guillaume/repos/stackone/stackone-client-postman
+workflow:
+    workflowVersion: 1.0.0
+    sources:
+        hris:
+            inputs:
+                - location: https://api2.eu1.stackone.com/oas/hris.json
+            registry:
+                location: registry.speakeasyapi.dev/stackone/stackone/hris
+    targets:
+        my-first-target:
+            target: postman
+            source: hris

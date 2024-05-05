@@ -1,0 +1,11 @@
+workflowVersion: 1.0.0
+sources:
+    hris:
+        inputs:
+            - location: https://api2.eu1.stackone.com/oas/hris.json
+        registry:
+            location: registry.speakeasyapi.dev/stackone/stackone/hris
+targets:
+    my-first-target:
+        target: postman
+        source: hris
