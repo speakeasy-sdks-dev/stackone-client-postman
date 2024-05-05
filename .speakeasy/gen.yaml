@@ -12,7 +12,7 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
 postman:
-  version: 0.0.1
+  version: 0.0.2
   imports:
     option: openapi
     paths:
@@ -22,4 +22,4 @@ postman:
       shared: shared
   inputModelSuffix: input
   outputModelSuffix: output
-  packageName: openapi
+  packageName: StackOne

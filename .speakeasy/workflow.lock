@@ -6,22 +6,34 @@ sources:
         sourceBlobDigest: sha256:a21283c725517eae2c1e09b5fa157355a7cbe02c3b05854f3ecb07cf8820cc1a
         tags:
             - latest
+    my-source:
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:8878060c72c6286181bad5678d4476ead3658882d8ea2abfe72247fe153d891c
+        sourceBlobDigest: sha256:39f04074311b52fc743ab5115d8773237cccca8381036a08f7758a1b523dbf2a
+        tags:
+            - latest
 targets:
     my-first-target:
-        source: hris
-        sourceNamespace: hris
-        sourceRevisionDigest: sha256:82502c02f7326834f5973abb6f50de8cdc24f65c40b5c16bf1a87381e01460e5
-        sourceBlobDigest: sha256:a21283c725517eae2c1e09b5fa157355a7cbe02c3b05854f3ecb07cf8820cc1a
+        source: my-source
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:8878060c72c6286181bad5678d4476ead3658882d8ea2abfe72247fe153d891c
+        sourceBlobDigest: sha256:39f04074311b52fc743ab5115d8773237cccca8381036a08f7758a1b523dbf2a
         outLocation: /Users/guillaume/repos/stackone/stackone-client-postman
 workflow:
     workflowVersion: 1.0.0
+    speakeasyVersion: latest
     sources:
-        hris:
+        my-source:
             inputs:
+                - location: https://api2.eu1.stackone.com/oas/stackone.json
                 - location: https://api2.eu1.stackone.com/oas/hris.json
+                - location: https://api2.eu1.stackone.com/oas/ats.json
+                - location: https://api2.eu1.stackone.com/oas/crm.json
+                - location: https://api2.eu1.stackone.com/oas/iam.json
+                - location: https://api2.eu1.stackone.com/oas/marketing.json
             registry:
-                location: registry.speakeasyapi.dev/stackone/stackone/hris
+                location: registry.speakeasyapi.dev/stackone/stackone/my-source
     targets:
         my-first-target:
             target: postman
-            source: hris
+            source: my-source
