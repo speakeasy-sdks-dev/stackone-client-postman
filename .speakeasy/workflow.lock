@@ -1,4 +1,4 @@
-speakeasyVersion: 1.279.0
+speakeasyVersion: 1.306.0
 sources:
     hris:
         sourceNamespace: hris
@@ -8,17 +8,18 @@ sources:
             - latest
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:8878060c72c6286181bad5678d4476ead3658882d8ea2abfe72247fe153d891c
-        sourceBlobDigest: sha256:39f04074311b52fc743ab5115d8773237cccca8381036a08f7758a1b523dbf2a
+        sourceRevisionDigest: sha256:9a29406cc8c51b19c217e233aec527302a379434cbc8b84f1c9af6f01675542d
+        sourceBlobDigest: sha256:6002bc42b36aba97c41e0783a166694b19874963e5cedb5dcd70d61c3e3e494b
         tags:
             - latest
+            - main
 targets:
     my-first-target:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:8878060c72c6286181bad5678d4476ead3658882d8ea2abfe72247fe153d891c
-        sourceBlobDigest: sha256:39f04074311b52fc743ab5115d8773237cccca8381036a08f7758a1b523dbf2a
-        outLocation: /Users/guillaume/repos/stackone/stackone-client-postman
+        sourceRevisionDigest: sha256:9a29406cc8c51b19c217e233aec527302a379434cbc8b84f1c9af6f01675542d
+        sourceBlobDigest: sha256:6002bc42b36aba97c41e0783a166694b19874963e5cedb5dcd70d61c3e3e494b
+        outLocation: /github/workspace/repo
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
