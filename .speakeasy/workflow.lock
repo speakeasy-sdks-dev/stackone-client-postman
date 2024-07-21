@@ -1,4 +1,4 @@
-speakeasyVersion: 1.335.0
+speakeasyVersion: 1.344.1
 sources:
     hris:
         sourceNamespace: hris
@@ -8,8 +8,8 @@ sources:
             - latest
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:aa9e46720047b52314f0f42d54b8583c11c41fbcb97409b7382dc68f70ccc0c7
-        sourceBlobDigest: sha256:72a517c14bd62df11d4b0ee15f99d78fa5ae175e1657b3c2faebd4f3b812be42
+        sourceRevisionDigest: sha256:8d98f2844fb10874adee24e7c38e58726a5f7957b95d62107c3fc916349a01f4
+        sourceBlobDigest: sha256:ef19828ab8ee8f24ab79489792a4c464ea05a6b83d970c2ccc18b5bf3163b008
         tags:
             - latest
             - main
@@ -17,8 +17,8 @@ targets:
     my-first-target:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:aa9e46720047b52314f0f42d54b8583c11c41fbcb97409b7382dc68f70ccc0c7
-        sourceBlobDigest: sha256:72a517c14bd62df11d4b0ee15f99d78fa5ae175e1657b3c2faebd4f3b812be42
+        sourceRevisionDigest: sha256:8d98f2844fb10874adee24e7c38e58726a5f7957b95d62107c3fc916349a01f4
+        sourceBlobDigest: sha256:ef19828ab8ee8f24ab79489792a4c464ea05a6b83d970c2ccc18b5bf3163b008
         outLocation: /github/workspace/repo
 workflow:
     workflowVersion: 1.0.0
