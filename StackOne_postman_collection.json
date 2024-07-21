@@ -2307,6 +2307,83 @@
                     }
                 },
                 {
+                    "name": "List Department Groups",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/groups/departments",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "groups",
+                                "departments"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
                     "name": "Get Group",
                     "request": {
                         "method": "GET",
@@ -2349,6 +2426,64 @@
                                 {
                                     "key": "fields",
                                     "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Department Group",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/groups/departments/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "groups",
+                                "departments",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name",
                                     "type": "string"
                                 }
                             ],
@@ -3345,7 +3480,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,created_at,updated_at",
+                                    "value": "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,custom_fields,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -3378,6 +3513,11 @@
                                 {
                                     "key": "sync_token",
                                     "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "include",
+                                    "value": "custom_fields",
                                     "type": "string"
                                 }
                             ]
@@ -3466,7 +3606,12 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,created_at,updated_at",
+                                    "value": "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,custom_fields,created_at,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "include",
+                                    "value": "custom_fields",
                                     "type": "string"
                                 }
                             ],
@@ -7171,6 +7316,225 @@
                                     "value": "id,remote_id,name,created_at,updated_at,description,schedule_type,status,channels,first_sent_at,last_sent_at,tags,messages",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Content Blocks",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/marketing/content_blocks",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "marketing",
+                                "content_blocks"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,type,content,status,tags,created_at,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create Content Block",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/marketing/content_blocks",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "marketing",
+                                "content_blocks"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Content Blocks",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/marketing/content_blocks/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "marketing",
+                                "content_blocks",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,type,content,status,tags,created_at,updated_at",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update email template",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/marketing/content_blocks/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "marketing",
+                                "content_blocks",
+                                ":id"
                             ],
                             "variable": [
                                 {
