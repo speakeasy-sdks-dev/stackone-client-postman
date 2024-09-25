@@ -11,7 +11,7 @@ management:
 features:
   postman:
     constsAndDefaults: 0.1.0
-    core: 0.1.13
+    core: 0.1.14
     deprecations: 0.0.0
     examples: 0.1.0
     globalSecurity: 0.1.1
